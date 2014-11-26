@@ -49,7 +49,7 @@ Crafty.c('Fish', {
     init: function() {
 
         this.nOverlap = -5;
-        this.requires('Actor, Collision, Solid, spr_box');
+        this.requires('Actor, Collision, Solid, Mouse, spr_box');
 
         this.bind('Click', function(e) {
             alert("Clicked!");
