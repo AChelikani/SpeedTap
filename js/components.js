@@ -1,3 +1,4 @@
+// Initializes Grid object 
 Crafty.c('Grid', {
     init: function() {
 
@@ -28,6 +29,7 @@ Crafty.c('Grid', {
 
 });
 
+// Initializes Actor object
 Crafty.c('Actor', {
 
     init: function() {
@@ -36,6 +38,7 @@ Crafty.c('Actor', {
 
 });
 
+// Initializes BG object
 Crafty.c('BG', {
 
     init: function() {
@@ -44,6 +47,7 @@ Crafty.c('BG', {
 
 });
 
+// Initializes Fish object
 Crafty.c('Fish', {
 
     init: function() {
@@ -51,6 +55,7 @@ Crafty.c('Fish', {
         this.nOverlap = -5;
         this.requires('Actor, Collision, Solid, Mouse, spr_box');
 
+        // Binding mouse click
         this.bind('Click', function(e) {
             alert("Clicked!");
         });

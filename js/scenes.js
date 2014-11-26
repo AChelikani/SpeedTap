@@ -1,3 +1,4 @@
+// Loading Scren
 Crafty.scene('Loading', function(){
 
     Crafty.e('2D, DOM, Text')
@@ -5,6 +6,7 @@ Crafty.scene('Loading', function(){
     .attr({ x: 0, y: Game.height()/2 - 24, w: Game.width() })
     .css($text_css);
 
+    // Loads assets from assets directory
     Crafty.load(['assets/ocean.png',
                  'assets/fish.png'] , function(){
 
@@ -16,12 +18,14 @@ Crafty.scene('Loading', function(){
             spr_bg: [0, 0]
         });
 
+        // Moves to next scene
         Crafty.scene('Game');
 
     });
 
 });
 
+// Main scene in which game runs
 Crafty.scene('Game', function() {
 
     Crafty.e('BG').at(0, 0);
