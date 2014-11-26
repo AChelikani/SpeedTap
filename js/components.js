@@ -43,3 +43,13 @@ Crafty.c('BG', {
     }
 
 });
+
+Crafty.c('Box', {
+
+    init: function() {
+
+        this.nOverlap = -5;
+        this.requires('Actor, Collision, Solid, spr_box');
+        
+    }
+});
