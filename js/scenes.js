@@ -31,15 +31,22 @@ Crafty.scene('Game', function() {
     var GAME_LENGTH = 5000; // In seconds
     var SPAWN_TIME = 1000; // In milliseconds
 
-    var startTime = Date.now();
+    var score = 0;
 
     Crafty.e('BG').at(0, 0);
+    /*
+    Crafty.e('2D, DOM, Text')
+    .text("Score: " + score)
+    .attr({ x: 0, y: Game.height()/2 - 24, w: Game.width() })
+    .css($text_css)
+    .bind("UpdateScore", function)
+    */
+
     // Spawns an enemy in a random position every 2 seconds
     function spawnEnemy() {
         var randX = Crafty.math.randomInt(1, 40);
         var randY = Crafty.math.randomInt(1, 20);
         Crafty.e("Fish").at(randX, randY);
-        // setTimeout(spawnEnemy, SPAWN_TIME);
     }
 
     function haltSpawning() {
