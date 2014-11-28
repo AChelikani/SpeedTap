@@ -25,11 +25,20 @@ Crafty.scene('Loading', function(){
 
 });
 
+function spawnEnemy() {
+    var randX = Crafty.math.randomInt(1,40);
+    var randY = Crafty.math.randomInt(1,20);
+    Crafty.e("Fish").at(randX, randY);
+    setTimeout(spawnEnemy, 2000);
+}
+
+
 // Main scene in which game runs
 Crafty.scene('Game', function() {
 
     Crafty.e('BG').at(0, 0);
 
-    Crafty.e('Fish').at(7, 7);
+    var totalEnemies = 0;
+    spawnEnemy();
 
 });
