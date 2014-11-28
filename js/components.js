@@ -57,7 +57,7 @@ Crafty.c('Fish', {
 
         // Binding mouse click
         this.bind('Click', function(e) {
-            this.destroy();
+            this.destroy(); // Enemy disappears
         });
         
     }
