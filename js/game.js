@@ -1,3 +1,13 @@
+/* Features that need to be added:
+V. 1: Enemies disappear on click, max number of enemies
+V. 2: Scoring, losing + winning conditions
+V. 3: Losing + winning screens, death animations
+V. 4: Starting screen, difficulty settings
+V. 5: Overall UI revamp
+
+
+*/
+
 Game = {
 
     map_grid: {

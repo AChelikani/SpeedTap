@@ -52,14 +52,12 @@ Crafty.c('Fish', {
 
     init: function() {
 
-        alive = true;
         this.nOverlap = -5;
         this.requires('Actor, Collision, Solid, Mouse, spr_box');
 
         // Binding mouse click
         this.bind('Click', function(e) {
-            alert("Clicked!");
-            alive = false;
+            this.destroy();
         });
         
     }

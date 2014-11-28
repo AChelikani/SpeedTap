@@ -25,20 +25,22 @@ Crafty.scene('Loading', function(){
 
 });
 
-function spawnEnemy() {
-    var randX = Crafty.math.randomInt(1,40);
-    var randY = Crafty.math.randomInt(1,20);
-    Crafty.e("Fish").at(randX, randY);
-    setTimeout(spawnEnemy, 2000);
-}
-
 
 // Main scene in which game runs
 Crafty.scene('Game', function() {
+    var MAX_ENEMIES = 3;
+    var SPAWN_TIME = 2000; // In milliseconds
+
+    // Spawns an enemy in a random position every 2 seconds
+    function spawnEnemy() {
+        var randX = Crafty.math.randomInt(1,40);
+        var randY = Crafty.math.randomInt(1,20);
+        Crafty.e("Fish").at(randX, randY);
+        setTimeout(spawnEnemy, SPAWN_TIME);
+    }
 
     Crafty.e('BG').at(0, 0);
 
-    var totalEnemies = 0;
     spawnEnemy();
 
 });
