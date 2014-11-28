@@ -31,4 +31,5 @@ Crafty.scene('Game', function() {
     Crafty.e('BG').at(0, 0);
 
     Crafty.e('Fish').at(7, 7);
+
 });
